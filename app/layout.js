@@ -1,5 +1,6 @@
 import { Rubik } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
@@ -15,10 +16,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="emerald">
       <body className={rubik.className}>
-
+        <div className="space-y-6 md:space-y-10">
+        <Header/>
         <main>
           {children}
         </main>
+        </div>
         </body>
     </html>
   );
